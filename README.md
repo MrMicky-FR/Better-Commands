@@ -21,9 +21,9 @@ Now you will need to create a new Command, just create a class that extend `Comm
 
 The `Command` class has two constructors:
 * One basic, with only a `String` (the name of the command)
-* One advanced, with the name of the command, the permission (can be`null`), a descirption (can be`null`) and aliases.
+* One advanced, with the name of the command, the permission (can be `null`), a descirption (can be `null`) and aliases.
 
-In your command class you will need to implement the method `execute(CommandSender sender, String[] args)` wich will be call when the command is exectute.
+In your command class you will need to implement the method `execute` wich will be call when the command is exectute.
 
 If you want to have tab-complete command in your command, just make your command class implements `TabExecutor`, then implements the `tabComplete` method.
 
