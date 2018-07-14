@@ -1,7 +1,7 @@
 # BetterCommands
 A small Bukkit librairy that allow you to create commands a lot faster.
 
-**Actually the project is still in beta and is not finish for the moment**
+**Actually the project is still in beta and you should not use it if you don't know what you are doing as it can break compatibility with some plugins**
 
 **Java 8 is a prerequisite for BetterCommands!**
 
