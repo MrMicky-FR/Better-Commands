@@ -8,7 +8,9 @@ import org.bukkit.plugin.Plugin;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class CommandManager {
 
@@ -82,7 +84,7 @@ public class CommandManager {
     }
 
     public Set<Command> getCommands() {
-        return new LinkedHashSet<>(commands);
+        return new HashSet<>(commands);
     }
 
     public static String getNoPermissionMessage() {
