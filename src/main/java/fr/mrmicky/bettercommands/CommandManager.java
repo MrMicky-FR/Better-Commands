@@ -7,6 +7,7 @@ import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.plugin.Plugin;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -27,12 +28,13 @@ public class CommandManager {
 
     static {
         try {
-            BUKKIT_COMMAND_MAP = (CommandMap) Bukkit.getServer().getClass().getDeclaredMethod("getCommandMap").invoke(Bukkit.getServer());
+            Method getCommandMapMethod = Bukkit.getServer().getClass().getDeclaredMethod("getCommandMap");
+            BUKKIT_COMMAND_MAP = (CommandMap) getCommandMapMethod.invoke(Bukkit.getServer());
 
             KNOWN_COMMANDS_FIELD = SimpleCommandMap.class.getDeclaredField("knownCommands");
             KNOWN_COMMANDS_FIELD.setAccessible(true);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (ReflectiveOperationException e) {
+            throw new ExceptionInInitializerError(e);
         }
     }
 
@@ -63,7 +65,7 @@ public class CommandManager {
 
             bukkitCommand.unregister(BUKKIT_COMMAND_MAP);
             commands.remove(command);
-        } catch (Exception e) {
+        } catch (ReflectiveOperationException e) {
             e.printStackTrace();
         }
     }

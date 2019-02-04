@@ -8,6 +8,7 @@
     <artifactId>bettercommands</artifactId>
     <version>1.0</version>
 
+    <name>BetterCommands</name>
     <url>https://github.com/MrMicky-FR/BetterCommands</url>
 
     <properties>
@@ -20,19 +21,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
     </build>
 
     <repositories>

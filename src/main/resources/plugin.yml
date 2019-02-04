@@ -1,6 +1,0 @@
-name: BetterCommandsTest
-version: ${project.version}
-main: fr.mrmicky.bettercommandstest.BetterCommandsTest
-author: MrMicky
-description: Test plugin for BetterCommands
-website: https://github.com/MrMicky-FR/BetterCommands

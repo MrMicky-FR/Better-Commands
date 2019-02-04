@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface TabExecutor {
 
-    List<String> tabComplete(CommandSender sender, String args[]);
+    List<String> tabComplete(CommandSender sender, String[] args);
 }
